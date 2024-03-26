@@ -1,0 +1,56 @@
+/*O seletor `*` aplica as propriedades a todos os elementos da página, removendo margens, preenchimentos e definindo a caixa de modelo como border-box.*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #00008bcb;
+  }
+  
+  /*O seletor `.wrapper` define o layout do elemento pai da animação, centralizando-o na página verticalmente e horizontalmente.*/
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  /*O seletor `.wrapper .loader` define o layout da animação, espaçando igualmente os elementos filhos.*/
+  .wrapper .loader {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 20px;
+  }
+  /*O seletor `.loader .loading` define as propriedades dos círculos de carregamento, como cor de fundo, tamanho, borda arredondada e animação.*/
+  .loader .loading {
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin: 0 10px;
+    animation: load 0.8s ease infinite;
+  }
+  
+  /*O seletor `.loader .loading.one`, `.loader .loading.two`, `.loader .loading.three` define os atrasos de animação para cada círculo, criando uma sequência de animação.*/
+  .loader .loading.one {
+    animation-delay: 0.3s;
+  }
+  .loader .loading.two {
+    animation-delay: 0.4s;
+  }
+  .loader .loading.three {
+    animation-delay: 0.5s;
+  }
+  /*A regra `@keyframes load` define a animação dos círculos, especificando como eles devem mudar de tamanho ao longo do tempo.*/
+  @keyframes load {
+    0% {
+      width: 30px;
+      height: 30px;
+    }
+    50% {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  /*No geral, este código cria uma animação de carregamento simples e responsiva usando HTML e CSS. */
